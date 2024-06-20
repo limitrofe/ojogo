@@ -1,0 +1,655 @@
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #121212 url(https://gshow.globo.com/tudo-mais/pop/justica-2/_astro/bg-opacity-05_small.VcYo2xwR.png)repeat right top;
+    color:#f1f1f1;
+}
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazy-loaded {
+    opacity: 1;
+}
+
+.logo-abre{
+    width: 30%;
+}
+
+a {
+    text-decoration: none;
+}
+h2{
+    font-size: 3rem;
+    text-align: center;
+    line-height: 3.5rem;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    color: #cb2228;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+h5{
+    
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 100px;
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
+p{
+    font-size: 1.0rem;
+    line-height: 1.6rem;
+    font-weight: 100;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+blockquote{
+    font-size: 1.6rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    line-height: 2rem;
+    padding: 0;
+    margin: 0;
+    color: #cb2228;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+table {
+    padding-top: 20px;
+    border-collapse: collapse;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 10px;
+    padding: 8px;
+    border-bottom: #555;
+}
+
+
+
+
+#home-texto{
+    /* margin-left: 10%;
+    margin-right: 30%;
+    line-height: 1.5rem; */
+}
+#episodios{
+}
+#personagens{
+}
+#vida-real h2{
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    margin-left: 25%;
+    margin-right: 10%;
+
+}
+#depoimentos{
+    text-align: center;
+}
+#relacionados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+    
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    z-index: 10;
+}
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar img {
+    width: 200px;
+}
+.menu-btn {
+    /* position: fixed; */
+    font-size: 40px;
+    cursor: pointer;
+    display: block; /* Always show menu button */
+    padding-right: 30px;
+    padding-left: 30px;
+    transform: rotate(90deg); 
+    color: #cb2228;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hide menu items */
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+.overlay-content {
+    text-align: center;
+    color: #fff;
+}
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #cb2228;
+    display: block;
+    transition: 0.3s;
+}
+.overlay-content a:hover, .overlay-content a:focus {
+    color: #cb2228;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #cb2228;
+}
+.content {
+    /* padding: 60px 20px; */
+}
+.ficha{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
+    text-align: left;
+}
+.fixed-footer-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(152.25deg, #fb0234 40.65%, #ff8f01 88.29%);
+    color: white;
+    border: none;
+    /* padding: 15px 20px; */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20%; /* Changed to make it round */
+    z-index: 3;
+    width: 5rem;
+    height: 5rem;
+}
+.video-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.video-section video {
+    width: 100%;
+    height: auto;
+}
+.video-container {
+position: relative;
+width: 100%;
+height: 100vh; /* Full height of the viewport */
+overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.countdown{
+    
+    padding-top: 50px;
+}
+.fichatecnica{
+    padding: 0;
+    font-weight:600;
+    font-size: 1.3rem;
+    padding-bottom: 0;
+    margin: 0;
+    text-align: right;
+    color: #cb2228;
+}
+.fichatecnica-resposta{
+    padding: 0;
+    font-weight:100;
+    font-size: 1.3rem;
+    padding-bottom: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.section {
+    display: none; /* Esconde todas as seções por padrão */
+    /* min-height: 100vh; Garante que a seção tenha pelo menos a altura da viewport */
+    overflow-y: auto; /* Permite rolar o conteúdo se for maior que a altura da seção */
+}
+
+.section.active {
+    display: block; /* Mostra a seção ativa */
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+.slider::-webkit-scrollbar {
+    height: 8px;
+}
+.slider::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.slider::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.video-container-depoimento {
+    flex: 0 0 auto;
+    width: 100vh; /* 9/16 of the height */
+    margin-right: 10px;
+    text-align: center;
+}
+.video-depoimento {
+    width: 90%;
+    height: 90%;
+}
+.caption-video-depoimento {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.galeria-curiosidades-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+.galeria-curiosidades-slider::-webkit-scrollbar {
+    height: 12px;
+}
+.galeria-curiosidades-slider::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+.galeria-curiosidades-slider::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.galeria-curiosidades-item-container {
+    flex: 0 0 auto;
+    width: 210px;
+    margin-right: 50px;
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#afroverso .galeria-curiosidades-item-container {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 50px;
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.galeria-curiosidades-item-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.galeria-curiosidades-caption {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: left;
+}
+.background-texture {
+width: 100vw;
+height: 100vh;
+background-image: url('images/textura.jpg');
+background-size: cover; /* Ou 'contain' dependendo do efeito desejado */
+background-repeat: no-repeat;
+background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+    .video-section video {
+        width: auto;
+        height: 100vh; /* Full height on mobile */
+    }
+
+a {
+    text-decoration: none;
+}
+.logo-abre{
+    width: 90%;
+}
+
+p{
+margin-left:10px;
+margin-right: 10px;
+font-size: 1rem;
+line-height: 1.6rem;
+font-weight: 300;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: left;
+    line-height: 2.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+blockquote{
+    font-size: 1.6rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    line-height: 2.5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    text-align: left;
+}
+table {
+    padding-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+th, td {
+    border: 10px;
+    padding: 8px;
+    border-bottom: #555;
+}
+
+.fichatecnica{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.fichatecnica-resposta{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#home-texto{
+}
+
+
+#episodios{
+}
+#personagens{
+}
+#depoimentos{
+    text-align: center;
+}
+h5{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 20px;
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+#relacionados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: black;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+}
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    display: block; /* Always show menu button */
+    padding-right: 30px;
+    padding-bottom: 0px;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hide menu items */
+}
+.navbar img {
+    width: 160px;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.overlay-content {
+    text-align: center;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.5rem;
+}
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #cb2228;
+    display: block;
+    transition: 0.3s;
+}
+.overlay-content a:hover, .overlay-content a:focus {
+    color: #f1f1f1;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: #cb2228;
+}
+/* .content {
+    padding: 60px 20px;
+} */
+.fixed-footer-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(152.25deg, #fb0234 40.65%, #ff8f01 88.29%);
+    color: white;
+    border: none;
+    /* padding: 15px 20px; */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20%; /* Changed to make it round */
+    z-index: 3;
+    width: 5rem;
+    height: 5rem;
+}
+.video-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-container {
+position: relative;
+width: 100%;
+height: 100vh; /* Full height of the viewport */
+overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.countdown{
+    
+    /* padding-top: 50px; */
+}
+.fichatecnica{
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+.fichatecnica-resposta{
+    font-weight:normal;
+    font-size: 1rem;
+
+}
+
+.section {
+    display: none; /* Esconde todas as seções por padrão */
+    min-height: 100vh; /* Garante que a seção tenha pelo menos a altura da viewport */
+    overflow-y: auto; /* Permite rolar o conteúdo se for maior que a altura da seção */
+}
+
+.section.active {
+    display: block; /* Mostra a seção ativa */
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+.slider::-webkit-scrollbar {
+    height: 8px;
+}
+.slider::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.slider::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.video-container-depoimento {
+    flex: 0 0 auto;
+    width: 100vh; /* 9/16 of the height */
+    margin-right: 10px;
+    text-align: center;
+}
+.video-depoimento {
+    width: 90%;
+    height: 90%;
+}
+.caption-video-depoimento {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.galeria-curiosidades-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+.galeria-curiosidades-slider::-webkit-scrollbar {
+    height: 12px;
+}
+.galeria-curiosidades-slider::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+.galeria-curiosidades-slider::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.galeria-curiosidades-item-container {
+    flex: 0 0 auto;
+    width: 150px;
+    margin-right: 10px;
+    text-align: center;
+}
+.galeria-curiosidades-item-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.galeria-curiosidades-caption {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.background-texture {
+width: 100vw;
+height: 100vh;
+background-image: url('images/textura.jpg');
+background-size: cover; /* Ou 'contain' dependendo do efeito desejado */
+background-repeat: no-repeat;
+background-position: center;
+}
+.img-relacionados{
+    width: 95%;
+    padding-bottom: 20px;
+
+}
+#vida-real h2{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+     margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5px; 
+}
+
+}

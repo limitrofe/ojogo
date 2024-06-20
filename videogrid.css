@@ -1,0 +1,50 @@
+#depoimento-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    padding-top: 100px; /* Adicionado padding-top */
+}
+
+.depoimento-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.efplayer {
+    position: absolute;
+    aspect-ratio: 16 / 9;
+    width: 100vw; /* 80% da viewport */
+    height: auto;
+    opacity: 1;
+}
+
+.depoimento-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.depoimento-efplayer {
+    position: absolute;
+    aspect-ratio: 16 / 9;
+    width: 80vw; /* 80% da viewport */
+    height: auto;
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .depoimento-efplayer {
+        width: 90vw; /* Proporção 16/9 */
+        height: auto;
+    }
+}

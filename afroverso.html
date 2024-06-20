@@ -1,0 +1,124 @@
+<style>
+#afroverso-section {
+    align-content: center;
+    padding: 20px;
+}
+
+.afroverso-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.afroverso-card {
+    flex: 1 1 calc(25% - 40px); /* Ajustado para garantir espaçamento */
+    perspective: 1000px;
+    box-sizing: border-box;
+    margin: 20px 10px; /* Espaçamento entre os cards */
+    height: 500px;
+}
+
+.afroverso-card-inner {
+    position: relative;
+    width: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.afroverso-card:hover .afroverso-card-inner, .afroverso-card:focus .afroverso-card-inner {
+    transform: rotateY(180deg);
+}
+
+.afroverso-card-front, .afroverso-card-back {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.afroverso-card-front {
+    background: #fff;
+}
+
+.afroverso-card-back {
+    background: #f8f8f8;
+    transform: rotateY(180deg);
+}
+
+.afroverso-card-img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .afroverso-card {
+        flex: 1 1 calc(50% - 40px); /* Dois cards por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .afroverso-card {
+        flex: 1 1 calc(50% - 40px); /* Dois cards por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .afroverso-card {
+        flex: 1 1 calc(100% - 40px); /* Um card por linha */
+    }
+}
+</style>
+<div id="afroverso-section" class="afroverso-content active" style="align-content: center;">
+    <h2>Personagens Afroverso</h2>
+    <p>Em O Jogo que Mudou a História, o público reencontra alguns personagens que surgiram, inicialmente, em outras séries da AfroReggae. Como a trama da nova produção se passa muitos anos antes dos acontecimentos de Arcanjo Renegado e A Divisão, tais personagens aparecem mais jovens. Confira, abaixo, quem são eles!</p>
+    <div class="afroverso-cards-container">
+        <div class="afroverso-card">
+            <div class="afroverso-card-inner">
+                <div class="afroverso-card-front">
+                    <img src="https://source.unsplash.com/random/300x400?person1" alt="arcanjo renegado" class="afroverso-card-img">
+                    <h3>Irmã Emily (Alli Willow)</h3>
+                </div>
+                <div class="afroverso-card-back">
+                    <p>Freira da Pastoral Carcerária. Emily nasceu nos EUA e luta pelos direitos dos presos há quase duas décadas. Possui sentimentos confusos por Belmiro, que põem em xeque sua aptidão para o hábito. Em Arcanjo Renegado, irmã Emily aparece mais velha em uma missão na Amazônia.</p>
+                </div>
+            </div>
+        </div>
+        <div class="afroverso-card">
+            <div class="afroverso-card-inner">
+                <div class="afroverso-card-front">
+                    <img src="https://source.unsplash.com/random/300x400?person2" alt="arcanjo renegado" class="afroverso-card-img">
+                    <h3>Tenente Gabriel (Leonardo Brício)</h3>
+                </div>
+                <div class="afroverso-card-back">
+                    <p>Mais um personagem que surgiu em Arcanjo Renegado, apresentado como o pai de Mikhael (Marcello Melo Jr) e Sarah (Erika Januza). É um homem que dá o sangue pela polícia, servindo de inspiração para seus dois filhos, que seguiram a mesma profissão.</p>
+                </div>
+            </div>
+        </div>
+        <div class="afroverso-card">
+            <div class="afroverso-card-inner">
+                <div class="afroverso-card-front">
+                    <img src="https://source.unsplash.com/random/300x400?person3" alt="arcanjo renegado" class="afroverso-card-img">
+                    <h3>Sargento Afonso (Marcello Melo)</h3>
+                </div>
+                <div class="afroverso-card-back">
+                    <p>Detetive eficiente e perspicaz, porém, corruptível. Ela aparece pela primeira vez na série A Divisão, trabalhando com Santiago (Erom Cordeiro) e Mendonça (Silvio Guindane) na DAAS - Divisão Antissequestro da Polícia do Rio de Janeiro.</p>
+                </div>
+            </div>
+        </div>
+        <div class="afroverso-card">
+            <div class="afroverso-card-inner">
+                <div class="afroverso-card-front">
+                    <img src="https://source.unsplash.com/random/300x400?person4" alt="A divisão" class="afroverso-card-img">
+                    <h3>Detetive Roberta (Natalia Lage)</h3>
+                </div>
+                <div class="afroverso-card-back">
+                    <p>40% dos atores são iniciantes, além de moradores de 18 favelas diferentes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

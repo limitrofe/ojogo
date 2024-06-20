@@ -1,0 +1,63 @@
+.map-container {
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: auto;
+}
+
+.point {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    /* border-radius: 50%; */
+    cursor: pointer;
+}
+
+/* Posições e imagem para desktop */
+@media (min-width: 769px) {
+    #map {
+        content: url('images/mapa-base-desk.jpg');
+    }
+    #point1 {
+        top: 34.8%;
+        left: 37.9%;
+    }
+    #point2 {
+        top: 36.6%;
+        left: 62.3%;
+    }
+    #point3 {
+        top: 53.7%;
+        left: 36%;
+    }
+    #point4 {
+        top: 90.2%;
+        left: 15.45%;
+    }
+}
+
+/* Posições e imagem para mobile */
+@media (max-width: 768px) {
+    #map {
+        content: url('images/mapa-base-mobile.jpg');
+    }
+    #point1 {
+        top: 30%;
+        left: 37%;
+    }
+    #point2 {
+        top: 32%;
+        left: 65%;
+    }
+    #point3 {
+        top: 50%;
+        left: 37%;
+    }
+    #point4 {
+        top: 80%;
+        left: 15%;
+    }
+}

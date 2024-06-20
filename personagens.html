@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo</title>
+    <link rel="stylesheet" href="personagens.css">
+</head>
+<body>
+    <div class="map-container">
+        <img src="images/mapa-base-desk.jpg" alt="Mapa Interativo" id="map">
+        <div class="point" id="point1" style="top: 34.8%; left: 37.9%;" onclick="openModal('modal1')"></div>
+        <div class="point" id="point2" style="top: 36.6%; left: 62.3%;" onclick="openModal('modal2')"></div>
+        <div class="point" id="point3" style="top: 53.7%; left: 36%;" onclick="openModal('modal3')"></div>
+        <div class="point" id="point4" style="top: 90.2%; left: 15.45%;" onclick="openModal('modal4')"></div>
+    </div>
+
+    <!-- Modal for point 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Ponto 1 - Detalhes</h2>
+            <div class="location-details">
+                <h3>Nome do local</h3>
+                <p>Texto 2013 poaskji f;lakjd f;lasj f;lakjsd f;lkajs...</p>
+            </div>
+            <div class="character-nav">
+                <div class="character-button" onclick="showCharacter('char1', 'modal1')">
+                    <img src="http://s2-g1.glbimg.com/rLYENAoe_1zDfNDophVLSaAIJEU=/0x0:228x228/150x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/i/N/0CaMvFRmK14JlGaTRvhQ/soletra-icon-112x112.png" alt="Personagem 1" loading="lazy">
+                    <p>Gilsinho<br>Nome do ator</p>
+                </div>
+                <div class="character-button" onclick="showCharacter('char2', 'modal1')">
+                    <img src="http://s2-g1.glbimg.com/VAD63PBIQrRrkwckyGlYrxqGO6I=/0x0:228x228/150x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/9/m/O4hjsPTBSco8fJrMyNsg/dito-icon-112x112.png" alt="Personagem 2" loading="lazy">
+                    <p>Gilsinho<br>Nome do ator</p>
+                </div>
+                <div class="character-button" onclick="showCharacter('char3', 'modal1')">
+                    <img src="http://s2-g1.glbimg.com/Puw_BQLYKBll1lFbXmz0bRz2-2M=/0x0:228x228/150x150/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/E/j/USPCPxQvWocicXQTr7CA/palavras-cruzadas-icon-112x112.png" alt="Personagem 3" loading="lazy">
+                    <p>Gilsinho<br>Nome do ator</p>
+                </div>
+            </div>
+            <div class="character-detail" id="modal1-char1" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="http://s2-g1.glbimg.com/rLYENAoe_1zDfNDophVLSaAIJEU=/0x0:228x228/300x300/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/i/N/0CaMvFRmK14JlGaTRvhQ/soletra-icon-112x112.png" alt="Personagem 1">
+                    <div class="character-info">
+                        <h3>Gilsinho</h3>
+                        <p>Nome do ator</p>
+                        <p>Informações detalhadas sobre o personagem 1...</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal1')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal1')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal1-char2" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="http://s2-g1.glbimg.com/VAD63PBIQrRrkwckyGlYrxqGO6I=/0x0:228x228/300x300/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/9/m/O4hjsPTBSco8fJrMyNsg/dito-icon-112x112.png" alt="Personagem 2">
+                    <div class="character-info">
+                        <h3>Gilsinho</h3>
+                        <p>Nome do ator</p>
+                        <p>Informações detalhadas sobre o personagem 2...</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal1')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal1')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal1-char3" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="http://s2-g1.glbimg.com/Puw_BQLYKBll1lFbXmz0bRz2-2M=/0x0:228x228/300x300/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/E/j/USPCPxQvWocicXQTr7CA/palavras-cruzadas-icon-112x112.png" alt="Personagem 3">
+                    <div class="character-info">
+                        <h3>Gilsinho</h3>
+                        <p>Nome do ator</p>
+                        <p>Informações detalhadas sobre o personagem 3...</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal1')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal1')">próximo →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="personagens.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos Dinâmicos</title>
+    <style>
+        #depoimento-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .depoimento-cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .efplayer {
+            position: absolute;
+            aspect-ratio: 16 / 9;
+            width: 80vw; /* 80% da viewport */
+            height: auto;
+            opacity: 0;
+        }
+
+        @media (max-width: 768px) {
+            .efplayer {
+                width: 80vw; /* Proporção 16/9 */
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="depoimento-section" class="depoimento-content active">
+        <h2 style="padding-bottom: 50px;">de olho nos bastidores</h2>
+        <div class="depoimento-cards-container">
+            <div class="efplayer" id="player-wrapper1"></div>
+            <div class="efplayer" id="player-wrapper2"></div>
+            <div class="efplayer" id="player-wrapper3"></div>
+            <div class="efplayer" id="player-wrapper5"></div>
+            <div class="efplayer" id="player-wrapper6"></div>
+            <div class="efplayer" id="player-wrapper7"></div>
+            <div class="efplayer" id="player-wrapper8"></div>
+            <div class="efplayer" id="player-wrapper9"></div>
+            <div class="efplayer" id="player-wrapper10"></div>
+        </div>
+    </div>
+
+    <script src="https://s3.glbimg.com/v1/AUTH_e1b09a2d222b4900a437a46914be81e5/api/stable/web/api.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script>
+        function onPlayerAvailable() {
+            const elements = document.querySelectorAll('.efplayer');
+            const videoIDs = [
+                '12631560', '12632079', '12633029', '12632735', 
+                '12632415', '12632774', '12632799', '12634956', 
+                '12635930', '12573974'
+            ];
+            
+            elements.forEach((element, index) => {
+                const player = new WM.Player({
+                    videosIDs: videoIDs[index],
+                    startMuted: false,
+                    autoPlay: false,
+                    onCanPlay: function(){ this.addPip(4452360) },
+                    skipDFP: false,
+                    width: '100%',
+                    height: '100%',
+                });
+                player.attachTo(element);
+            });
+        }
+        
+        WM.playerAvailable.then(onPlayerAvailable);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.depoimento-cards-container');
+            const players = document.querySelectorAll('.efplayer');
+
+            function updatePlayerStyles() {
+                const scrollTop = container.scrollTop;
+                const containerHeight = container.clientHeight;
+
+                players.forEach((player, index) => {
+                    const rect = player.getBoundingClientRect();
+                    const playerCenter = rect.top + rect.height / 2;
+                    const containerCenter = containerHeight / 2;
+
+                    const distanceFromCenter = Math.abs(containerCenter - playerCenter);
+                    const scale = Math.max(0.5, 1 - distanceFromCenter / containerCenter);
+                    const zIndex = Math.round(scale * 100);
+                    const opacity = scale > 0.5 ? 1 : 0;
+
+                    gsap.to(player, {
+                        scale: scale,
+                        zIndex: zIndex,
+                        opacity: opacity,
+                        xPercent: -50,
+                        duration: 0.3
+                    });
+                });
+            }
+
+            players.forEach((player, index) => {
+                player.style.top = `${index * (container.clientHeight * 1.1)}px`; // Espaçamento vertical de 10%
+                player.style.left = '50%';
+            });
+
+            container.addEventListener('scroll', updatePlayerStyles);
+            window.addEventListener('resize', updatePlayerStyles);
+            updatePlayerStyles();
+        });
+    </script>
+</body>
+</html>
+
+const element1 = document.querySelector('#player-wrapper1');
+const element2 = document.querySelector('#player-wrapper2');
+const element3 = document.querySelector('#player-wrapper3');
+const element5 = document.querySelector('#player-wrapper5');
+const element6 = document.querySelector('#player-wrapper6');
+const element7 = document.querySelector('#player-wrapper7');
+const element8 = document.querySelector('#player-wrapper8');
+const element9 = document.querySelector('#player-wrapper9');
+const element10 = document.querySelector('#player-wrapper10');
+
+player1.attachTo(element1);
+player2.attachTo(element2);
+player3.attachTo(element3);
+player5.attachTo(element5);
+        player6.attachTo(element6);
+        player7.attachTo(element7);
+        player8.attachTo(element8);
+        player9.attachTo(element9);
+        player10.attachTo(element10);      
+
+var player1 = new WM.Player({
+    videosIDs: '12631560',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+});
+var player2 = new WM.Player({
+    videosIDs: '12632079',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+});
+var player3 = new WM.Player({
+    videosIDs: '12633029',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+});
+var player5 = new WM.Player({
+    videosIDs: '12632735',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+});
+var player6 = new WM.Player({
+    videosIDs: '12632415',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+});
+var player7 = new WM.Player({
+    videosIDs: '12632774',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+});
+var player8 = new WM.Player({
+    videosIDs: '12632799',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+});
+var player9 = new WM.Player({
+    videosIDs: '12634956',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+});
+var player10 = new WM.Player({
+    videosIDs: '12635930',
+    startMuted: false,
+    autoPlay: false,
+    onCanPlay: function(){this.addPip(4452360)},
+    skipDFP: false,
+    width: '160px',
+    height: '90px',
+    // width: '100%',
+    // height: '100%',
+});

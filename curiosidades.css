@@ -1,0 +1,43 @@
+
+    .curiosidades-content {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curiosidades-cards-container {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .curiosidades-efplayer {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: 768px) {
+        .curiosidades-efplayer {
+            width: 40%;
+        }
+
+        .curiosidades-cards-container {
+            background-image: url('images/bg_desk_informacoes.jpg');
+        }
+    }
+
+    @media (max-width: 767px) {
+        .curiosidades-cards-container {
+            background-image: url('images/bg_mob_informacoes.jpg');
+        }
+    }

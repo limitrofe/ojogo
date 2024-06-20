@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O jogo que mudou a história</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="personagens.css">
+    <link rel="stylesheet" href="curiosidades.css">
+        <link rel="stylesheet" href="depoimento.css">
+    <link rel="stylesheet" href="mapa.css">
+    <link rel="stylesheet" href="afroverso.css">
+    <link rel="stylesheet" href="ep.css">
+    <link rel="stylesheet" href="videogrid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <meta property="og:image" content="images/ojogo-share.jpeg">
+    <meta property="og:image:alt" content="Rio de Janeiro, fim dos anos 1970. Um novo agente começa a trabalhar no presídio de Ilha Grande, mesma época em que um condenado chega à instituição que fica no litoral carioca. O momento é de efervescência das relações dentro da prisão. Baseada em fatos reais dos últimos 40 anos, a história mergulha no surgimento das facções do narcotráfico, a partir de eventos entre as alas do presídio “Falange Jacaré” e “Turma do Fundão”. O que acontece lá dentro repercute na vida de Padre Nosso, Parada Geral e Morro da Promessa, comunidades inspiradas em favelas reais.">
+    <link rel="canonical" href="https://gshow.globo.com/globoplay/o-jogo-que-mudou-a-historia/">
+
+</head>
+<body class="background-texture">
+    <div class="navbar">
+        <img src="images/ojogo-logo.png">
+        <span class="menu-btn" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#home" onclick="closeNav()">home</a>
+            <a href="#mapa" onclick="closeNav()">personagens</a>
+            <a href="#afroverso-section" onclick="closeNav()">crossover</a>
+            <a href="#game" onclick="closeNav()">o jogo</a>
+            <a href="#curiosidades-section" onclick="closeNav()">inspirações</a>
+            <a href="#curiosidades" onclick="closeNav()">curiosidades</a>
+            <a href="#depoimento-section" onclick="closeNav()">bastidores</a>
+            <a href="#noticias" onclick="closeNav()">notícias</a>
+            <a href="#relacionados" onclick="closeNav()">relacionados</a>
+        </div>
+    </div>
+    
+
+    <div id="home" class="section video-container active" style="height:100vh;">
+        
+            <div class="efplayer" id="player-wrapper4" style="height:100vh;"></div>
+          
+    </div>
+    <div id="home-texto" class="content" style="padding-top: 0;">
+        <center><img src="images/logo-titulo.png" style="text-align: center; padding-top: 50px;" class="logo-abre"></center>
+        <p>Rio de Janeiro, fim dos anos 1970. Um novo agente começa a trabalhar no presídio de Ilha Grande, mesma época em que um condenado chega à instituição que fica no litoral carioca. O momento é de efervescência das relações dentro da prisão.</p>
+        <p>Baseada em fatos reais dos últimos 40 anos, a história mergulha no surgimento das facções do narcotráfico, a partir de eventos entre as alas do presídio “Falange Jacaré” e “Turma do Fundão”. O que acontece lá dentro repercute na vida de Padre Nosso, Parada Geral e Morro da Promessa, comunidades inspiradas em favelas reais.</p>
+        <blockquote>“A série é a história da ‘pedra fundamental’ do crime no Rio de Janeiro” - José Junior  </blockquote>
+            <table style="padding-top: 20px; margin-top: 50px; margin-bottom: 50px;">
+                <tbody>
+                    <tr>
+                        <td><p class="fichatecnica">Estreia</p></td>
+                        <td><p class="fichatecnica-resposta">13/06/2024</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="fichatecnica">Episódios</p></td>
+                        <td><p class="fichatecnica-resposta">10 </p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="fichatecnica">Direção</p></td>
+                        <td><p class="fichatecnica-resposta">Heitor Dhalia</p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="fichatecnica">Autor</p></td>
+                        <td><p class="fichatecnica-resposta">José Junior </p></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div id="mapa" class="map-container">
+        <h5 style="position: absolute; z-index: 1; margin: 0;">a seguir, veja o mapa interativo que explica cada uma dessas regiões e como se cruzam nessa trama inédita.</h5>
+        <img src="images/mapa-base-desk.jpg" alt="Mapa Interativo" id="map">
+        <div class="point" id="point1" onclick="openModal('modal1', event)"></div>
+        <div class="point" id="point2" onclick="openModal('modal2', event)"></div>
+        <div class="point" id="point3" onclick="openModal('modal3', event)"></div>
+        <div class="point" id="point4" onclick="openModal('modal4', event)"></div>
+    </div>
+    
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Morro da Promessa</h2>
+            <div class="location-details">
+                <p>Comunidade vizinha a Padre Nosso e Parada Geral. A rotina da favela é muito semelhante à de Parada Geral, em que o crime tem domínio sobre as estruturas sociais. A vila fictícia também tem o assistencialismo dos traficantes pautando a organização social, auxiliando os moradores em necessidades básicas. Gilsinho é considerado um verdadeiro líder comunitário na região, que não tem uma associação local sólida.</p>
+            </div>
+            <div class="character-nav">
+                <div class="character-button" onclick="showCharacter(1, 'modal1')">
+                    <img src="images/personagens/gilsinho.jpg" alt="Personagem 1" loading="lazy">
+                    <p>Gilsinho</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(2, 'modal1')">
+                    <img src="images/personagens/periquito.jpg" alt="Personagem 2" loading="lazy">
+                    <p>Periquito</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(3, 'modal1')">
+                    <img src="images/personagens/jeronimo.jpg" alt="Personagem 3" loading="lazy">
+                    <p>Jerônimo<br> Fortes</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(4, 'modal1')">
+                    <img src="images/personagens/bruno.jpg" alt="Personagem 4" loading="lazy">
+                    <p>Bruno</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(5, 'modal1')">
+                    <img src="images/personagens/ailton.jpg" alt="Personagem 5" loading="lazy">
+                    <p>Aílton</p>
+                </div>
+            </div>
+            <div class="character-detail" id="modal1-char1" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/gilsinho.jpg" alt="Personagem 1">
+                    <div class="character-info">
+                        <h3>Gilsinho</h3>
+                        <p>Jonathan Azevedo</p>
+                        <p>Criminoso e poderoso traficante do Morro da Promessa. Estratégico e de forte carisma, ele é considerado uma figura mítica na região. Ele tem fala mansa e teve uma base familiar razoavelmente estruturada.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal1')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal1')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal1-char2" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/periquito.jpg" alt="Personagem 2">
+                    <div class="character-info">
+                        <h3>Periquito</h3>
+                        <p>Leonardo Xavier</p>
+                        <p>Fiel escudeiro e homem de confiança de Gilsinho no Morro da Promessa.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal1')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal1')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal1-char3" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/jeronimo.jpg" alt="Personagem 3">
+                    <div class="character-info">
+                        <h3>Jerônimo Fortes</h3>
+                        <p>Xando Graça</p>
+                        <p>Dono de gravadora em Morro da Promessa. Veste roupas caras e possui um estilo único. Conta com Bruno como seu braço direito na produtora, que lança diferentes talentos musicais.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal1')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal1')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal1-char4" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/bruno.jpg" alt="Personagem 4">
+                    <div class="character-info">
+                        <h3>Bruno</h3>
+                        <p>Lúcio Mauro Filho</p>
+                        <p>Produtor musical que aceita entrar como laranja no esquema de lavagem de dinheiro de Gilsinho.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal1')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal1')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal1-char5" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/ailton.jpg" alt="Personagem 5">
+                    <div class="character-info">
+                        <h3>Aílton</h3>
+                        <p>André Mattos</p>
+                        <p>Dono de um frigorífico. É aliciado por Gilsinho para se tornar um “padrinho” do Morro da Promessa, fornecendo carnes gratuitamente para a comunidade. Em troca, Gilsinho oferece proteção ao empresário.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal1')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal1')">próximo →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Parada Geral</h2>
+            <div class="location-details">
+                <p>Comunidade fictícia que fica próxima de Padre Nosso, em realidade quase oposta, sendo marcada pelo tráfico. A associação de moradores é presente, mas acaba sendo influenciada pelos criminosos em suas decisões. Os moradores convivem, normalmente, com traficantes armados e pedem ajuda deles para conseguir remédios e outros itens básicos de sobrevivência. </p>
+            </div>
+            <div class="character-nav">
+                <div class="character-button" onclick="showCharacter(1, 'modal2')">
+                    <img src="images/personagens/rui-do-boi.jpg" alt="Personagem 1" loading="lazy">
+                    <p>Rui do Boi</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(2, 'modal2')">
+                    <img src="images/personagens/claudinho-da-prata.jpg" alt="Personagem 2" loading="lazy">
+                    <p>Claudinho <br>da Prata</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(3, 'modal2')">
+                    <img src="images/personagens/gege.jpg" alt="Personagem 3" loading="lazy">
+                    <p>Gegê</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(4, 'modal2')">
+                    <img src="images/personagens/renatinho.jpg" alt="Personagem 4" loading="lazy">
+                    <p>Renatinho</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(5, 'modal2')">
+                    <img src="images/personagens/valeria.jpg" alt="Personagem 5" loading="lazy">
+                    <p>Valéria</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(6, 'modal2')">
+                    <img src="images/personagens/ivete.jpg" alt="Personagem 6" loading="lazy">
+                    <p>Ivete</p>
+                </div>
+            </div>
+            <div class="character-detail" id="modal2-char1" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/rui-do-boi.jpg" alt="Personagem 1">
+                    <div class="character-info">
+                        <h3>Rui do Boi</h3>
+                        <p>Patrick Bruno</p>
+                        <p>Líder da Associação de Moradores de Parada Geral. Menos engajado politicamente que Amarildo, ele não vê problemas na participação dos criminosos na rotina da favela, e tampouco se opõe à venda de tóxico.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal2')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal2')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal2-char2" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/claudinho-da-prata.jpg" alt="Personagem 2">
+                    <div class="character-info">
+                        <h3>Claudinho da Prata</h3>
+                        <p>Gilson da Maia</p>
+                        <p>Chefe do tráfico em Parada Geral. Ausente e sem vínculos afetivos, tem um relacionamento mal resolvido com Valéria, mãe de seu filho Renatinho. Aliado de Rui, tem o olhar de melhoria para a comunidade através do dinheiro do crime.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal2')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal2')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal2-char3" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/gege.jpg" alt="Personagem 3">
+                    <div class="character-info">
+                        <h3>Gegê</h3>
+                        <p>Samuel Melo</p>
+                        <p>Artilheiro habilidoso do time de Parada Geral. Sonha em ser jogador de futebol profissional e sobrevive praticando pequenos furtos. Mora em um barraco com a irmã e o sobrinho, Renatinho. Namora Lilian, mas mantém várias amantes simultaneamente.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal2')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal2')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal2-char4" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/renatinho.jpg" alt="Personagem 4">
+                    <div class="character-info">
+                        <h3>Renatinho</h3>
+                        <p>Fabricio Assis</p>
+                        <p>Melhor amigo de Binho e Ivete. Mora com sua mãe, Valéria, e seu tio, Gegê. Seu pai é Claudinho da Prata com quem mantém uma relação amistosa, mas pouco afetiva.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal2')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal2')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal2-char5" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/valeria.jpg" alt="Personagem 5">
+                    <div class="character-info">
+                        <h3>Valéria</h3>
+                        <p>Ana Isabela Godinho</p>
+                        <p>Irmã de Gegê e mãe de Renatinho, se prostitui na Vila Mimosa para ajudar a manter a família.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal2')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal2')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal2-char6" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/ivete.jpg" alt="Personagem 6">
+                    <div class="character-info">
+                        <h3>Ivete</h3>
+                        <p>Giulia Tavares</p>
+                        <p>Melhor amiga de Renatinho e Binho. Muito boa de bola, joga inclusive entre os meninos. </p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal2')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal2')">próximo →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Padre Nosso</h2>
+            <div class="location-details">
+                <p>A comunidade Padre Nosso, no Rio de Janeiro, tem uma rotina comum em que os moradores participam ativamente da vida social. Quando problemas surgem, como a falta de água, todos se unem e cobram soluções da associação de moradores. A forte liderança comunitária, que preza pelo respeito e pela ação coletiva, tenta frear a constante pressão do tráfico – recusando ajuda do dinheiro oriundo de criminosos.</p>
+            </div>
+            <div class="character-nav">
+                <div class="character-button" onclick="showCharacter(1, 'modal3')">
+                    <img src="images/personagens/amarildo.jpg" alt="Personagem 1" loading="lazy">
+                    <p>Amarildo</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(2, 'modal3')">
+                    <img src="images/personagens/marta.jpg" alt="Personagem 2" loading="lazy">
+                    <p>Marta</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(3, 'modal3')">
+                    <img src="images/personagens/lilian.jpg" alt="Personagem 3" loading="lazy">
+                    <p>Lilian</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(4, 'modal3')">
+                    <img src="images/personagens/baleia.jpeg" alt="Personagem 4" loading="lazy">
+                    <p>Baleia</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(5, 'modal3')">
+                    <img src="images/personagens/binho.jpg" alt="Personagem 5" loading="lazy">
+                    <p>Binho</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(6, 'modal3')">
+                    <img src="images/personagens/ze-perverso.jpg" alt="Personagem 6" loading="lazy">
+                    <p>Zé Perverso</p>
+                </div>
+            </div>
+            <div class="character-detail" id="modal3-char1" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/amarildo.jpg" alt="Personagem 1">
+                    <div class="character-info">
+                        <h3>Amarildo</h3>
+                        <p>Pedro Wagner</p>
+                        <p>Líder da Associação de Moradores de Padre Nosso. Respeitado por bandidos locais, vive em alerta para que o crime não domine a comunidade. Além disso, trabalha como maquinista na rede ferroviária e é presidente do Sindicato dos Ferroviários.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal3')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal3')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal3-char2" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/marta.jpg" alt="Personagem 2">
+                    <div class="character-info">
+                        <h3>Marta</h3>
+                        <p>Vanessa Giácomo</p>
+                        <p>Esposa de Amarildo. Devota de Nossa Senhora de Fátima, é muito ativa nos trabalhos da paróquia local ao lado da Irmã Emily. É contra o namoro de sua filha Lilian com Gegê.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal3')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal3')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal3-char3" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/lilian.jpg" alt="Personagem 3">
+                    <div class="character-info">
+                        <h3>Lilian</h3>
+                        <p>Talita Younan</p>
+                        <p>Filha biológica de Belmiro, mas foi criada pelos tios Amarildo e Marta, quem considera seus pais. Mantém um namoro com Gegê, que é de Parada Geral.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal3')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal3')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal3-char4" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/baleia.jpeg" alt="Personagem 4">
+                    <div class="character-info">
+                        <h3>Baleia</h3>
+                        <p>Léo Bahia</p>
+                        <p>João, de apelido “Baleia”, é o melhor goleiro que Padre Nosso já teve. É o pai de Binho, e cria o filho com a ajuda dos pais, Amarildo e Marta, desde que perdeu a esposa.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal3')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal3')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal3-char5" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/binho.jpg" alt="Personagem 5">
+                    <div class="character-info">
+                        <h3>Binho</h3>
+                        <p>João Fernandes</p>
+                        <p>Cresceu acompanhando a avó, Marta, nas missas. É amigo de Ivete - por quem é apaixonado, mas tem vergonha de se declarar - e Renatinho, que mora na comunidade Parada Geral. A amizade entre Binho e Renatinho é afetada quando começa uma rivalidade entre as favelas.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal3')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal3')">próximo →</button>
+                </div>
+            </div>
+
+            <div class="character-detail" id="modal3-char6" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/ze-perverso.jpg" alt="Personagem 6">
+                    <div class="character-info">
+                        <h3>Zé Perverso</h3>
+                        <p>Diego Raymond</p>
+                        <p>Chefe do tráfico de Padre Nosso. Apesar de temido pelos moradores, o criminoso respeita a liderança de Amarildo e não intervém nas ações coletivas.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal3')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal3')">próximo →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Presídio Ilha Grande</h2>
+            <div class="location-details">
+                <p>Palco de tortura e violência, é lá onde nascem as primeiras facções do Rio de Janeiro, no final dos anos 70. Com integrantes diversos, dois grupos comandam o lugar: de um lado, a falange Jacaré; e do outro, a Turma do Fundão, composta por assaltantes de banco e presos políticos.</p>
+                <p>O choque entre essas duas alas é a origem de uma guerra que ultrapassa os muros do presídio de Ilha Grande, que acaba culminando na formação da Falange Vermelha, um único grupo de presidiários visando o crime e o domínio do tráfico.</p>
+            </div>
+            <h3>Quem trabalha em Ilha Grande</h3>
+            <div class="character-nav">
+                <div class="character-button" onclick="showCharacter(1, 'modal4')">
+                    <img src="images/personagens/jesus-pedra.jpg" alt="Personagem 1" loading="lazy">
+                    <p>Jesus Pedra</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(2, 'modal4')">
+                    <img src="images/personagens/sampaio.jpg" alt="Personagem 2" loading="lazy">
+                    <p>Sampaio</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(3, 'modal4')">
+                    <img src="images/personagens/xavier.jpg" alt="Personagem 3" loading="lazy">
+                    <p>Xavier</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(4, 'modal4')">
+                    <img src="images/personagens/itamar.jpg" alt="Personagem 4" loading="lazy">
+                    <p>Itamar</p>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char1" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/jesus-pedra.jpg" alt="Personagem 1">
+                    <div class="character-info">
+                        <h3>Jesus Pedra</h3>
+                        <p>Raphael Logam</p>
+                        <p>Novo agente de Ilha Grande. Retilíneo em seus valores, ele tem muita energia, grandes expectativas sobre o futuro e sonha em ser engenheiro civil. Aos poucos, Jesus acaba vendo como o trabalho no presídio acaba com seus desejos e, ao mesmo tempo, passa a sentir uma atração pela violência que ele mesmo nunca tinha conhecido.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char2" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/sampaio.jpg" alt="Personagem 2">
+                    <div class="character-info">
+                        <h3>Sampaio</h3>
+                        <p>Rogério Blanck</p>
+                        <p>Major da PM e diretor do presídio. Atuante no sistema há quase trinta anos, é um homem incorruptível e violento. Fruto da ditadura, seu método de trabalho é o respeito através da violência.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char3" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/xavier.jpg" alt="Personagem 3">
+                    <div class="character-info">
+                        <h3>Xavier</h3>
+                        <p>Breno de Filippo</p>
+                        <p>Agente penitenciário. Morador de Ilha Grande, é usado como "mateiro" para ajudar na captura dos presos fugitivos. Xavier é ganancioso, e tem a plena confiança de Sampaio e Itamar.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char4" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/itamar.jpg" alt="Personagem 4">
+                    <div class="character-info">
+                        <h3>Itamar</h3>
+                        <p>Márcio Borges</p>
+                        <p>Chefe de segurança do presídio. Homem sofrido, cheio de perdas e que encontrou no presídio seu lugar no mundo. Ele acredita em uma prisão mais aberta aos esquemas e negociações com o crime e ambiciona subir ao posto de diretor.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <h3>Quem está preso em Ilha Grande</h3>
+            <div class="character-nav">
+                <div class="character-button" onclick="showCharacter(5, 'modal4')">
+                    <img src="images/personagens/belmiro.jpg" alt="Personagem 6" loading="lazy">
+                    <p>Belmiro</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(6, 'modal4')">
+                    <img src="images/personagens/chico-da-cavanha.jpg" alt="Personagem 7" loading="lazy">
+                    <p>Chico da<br> Cavanha</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(7, 'modal4')">
+                    <img src="images/personagens/hoffman.jpg" alt="Personagem 9" loading="lazy">
+                    <p>Hoffman</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(8, 'modal4')">
+                    <img src="images/personagens/china.jpg" alt="Personagem 10" loading="lazy">
+                    <p>China</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(9, 'modal4')">
+                    <img src="images/personagens/mestre.jpg" alt="Personagem 11" loading="lazy">
+                    <p>Mestre</p>
+                </div>
+                
+                <div class="character-button" onclick="showCharacter(10, 'modal4')">
+                    <img src="images/personagens/nogo.jpg" alt="Personagem 13" loading="lazy">
+                    <p>Nogô</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(11, 'modal4')">
+                    <img src="images/personagens/seu-helio.jpg" alt="Personagem 14" loading="lazy">
+                    <p>Seu Hélio</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(12, 'modal4')">
+                    <img src="images/personagens/joao-ignacio.jpg" alt="Personagem 15" loading="lazy">
+                    <p>João Ignácio</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(13, 'modal4')">
+                    <img src="images/personagens/naiba.jpg" alt="Personagem 16" loading="lazy">
+                    <p>Naíba</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(14, 'modal4')">
+                    <img src="images/personagens/egidio.jpg" alt="Personagem 5" loading="lazy">
+                    <p>Egidio</p>
+                </div>
+
+                <div class="character-button" onclick="showCharacter(15, 'modal4')">
+                    <img src="images/personagens/daniela.jpg" alt="Personagem 8" loading="lazy">
+                    <p>Daniella</p>
+                </div>
+                <div class="character-button" onclick="showCharacter(16, 'modal4')">
+                    <img src="images/personagens/jaqueline.jpg" alt="Personagem 12" loading="lazy">
+                    <p>Jacqueline</p>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char5" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/belmiro.jpg" alt="Personagem 6">
+                    <div class="character-info">
+                        <h3>Belmiro</h3>
+                        <p>Jailson Silva</p>
+                        <p>Preso há duas décadas. Foi expulso da polícia por ser participante de um grupo de extermínio e planeja refazer sua vida após deixar a cadeia. É um lobo solitário e tenta se aproximar da única pessoa por quem se afeiçoou nos anos de presídio: Irmã Emily.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char6" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/chico-da-cavanha.jpg" alt="Personagem 7">
+                    <div class="character-info">
+                        <h3>Chico da Cavanha</h3>
+                        <p>Romulo Braga</p>
+                        <p>É um dos líderes da Turma do Fundão, uma das falanges do presídio. Com anos de cadeia nas costas, é um homem apaixonado pela família, mas também é movido à violência. Junto de Hoffman e China, forma o trio de presos mais violentos do Fundão.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+
+            <div class="character-detail" id="modal4-char7" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/hoffman.jpg" alt="Personagem 9">
+                    <div class="character-info">
+                        <h3>Hoffman</h3>
+                        <p>Babu Santana</p>
+                        <p>Outro líder da Turma do Fundão. De personalidade forte, é considerado um dos presos mais violentos do presídio e se destaca na criação da Falange Vermelha, grupo de presidiários fruto da Noite de São Bartolomeu, rebelião ocorrida em Ilha Grande em 1979.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char8" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/china.jpg" alt="Personagem 10">
+                    <div class="character-info">
+                        <h3>China</h3>
+                        <p>Eduardo Dornelles</p>
+                        <p>Completa o trio de líderes da Turma do Fundão, ao lado de Chico da Cavanha e Hoffman. Violento e submisso, o preso usa da força para cumprir tarefas e seguir as ordens dos amigos de ala.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char9" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/mestre.jpg" alt="Personagem 11">
+                    <div class="character-info">
+                        <h3>Mestre</h3>
+                        <p>Bukassa Kabengele</p>
+                        <p>Preso respeitado por todos em Ilha Grande. Mesmo cansado do crime, ele é considerado um dos mais articulados e estrategistas do sistema. Está contando os dias para voltar para a família e recomeçar a vida ao lado da esposa Jaqueline e dos filhos.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char10" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/nogo.jpg" alt="Personagem 13">
+                    <div class="character-info">
+                        <h3>Nogô</h3>
+                        <p>Sérgio Laurentino</p>
+                        <p>Preso integrante da Turma do Fundão. Muito articulado, Nogô é fiel à Chico da Cavanha em absolutamente tudo o que faz – seja dentro da cadeia ou fora dela. Auxilia em planos de fuga e rebeliões da ala.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char11" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/seu-helio.jpg" alt="Personagem 14">
+                    <div class="character-info">
+                        <h3>Seu Hélio</h3>
+                        <p>Otávio Müller</p>
+                        <p>Líder do grupo dos “subversivos” - termo dado aos prisioneiros políticos. Sendo o mais respeitado pelos colegas de ala, ele demonstra esgotamento com os tratamentos sub-humanos dados aos presidiários e decide fazer uma greve de fome contra o sistema.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char12" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/joao-ignacio.jpg" alt="Personagem 15">
+                    <div class="character-info">
+                        <h3>João Ignácio</h3>
+                        <p>Alamo Facó</p>
+                        <p>Integrante dos “subversivos”. Ex-político assume a liderança do grupo após a morte de Seu Hélio, mas não com a mesma autonomia e respeito dos colegas de ala. Explosivo, tem grandes dificuldades de relacionamento. É o pai de Ronaldo Leitão, personagem de Arcanjo Renegado.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char13" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/naiba.jpg" alt="Personagem 16">
+                    <div class="character-info">
+                        <h3>Naíba</h3>
+                        <p>Ivson Rainero</p>
+                        <p>Líder da Falange Jacaré. Agitado e com pouco pensamento estratégico, ele cobra até pedágio dos presos para atravessar áreas do presídio. É morto pelos líderes do Fundão na Noite de São Bartolomeu.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char14" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/egidio.jpg" alt="Personagem 5">
+                    <div class="character-info">
+                        <h3>Egidio</h3>
+                        <p>Ravel Andrade</p>
+                        <p>Preso recém-chegado à Ilha Grande, e condenado após dirigir bêbado e atropelar a filha de um militar. Jovem de classe média carioca, a vida de Egídio nunca mais será a mesma, com a cadeia lhe tornando uma pessoa mais sombria e fria.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char15" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/daniela.jpg" alt="Personagem 8">
+                    <div class="character-info">
+                        <h3>Daniella</h3>
+                        <p>Kizi Vaz</p>
+                        <p>Esposa de Chico da Cavanha, é apaixonada pelo marido, mas impõe um limite para a montanha-russa a que Chico submete a família. Daniella quer para os filhos uma vida melhor do que a que ela e Chico tiveram, nem que para isso precise se afastar do crime e do marido.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+            <div class="character-detail" id="modal4-char16" style="display:none;">
+                <div class="character-detail-wrapper">
+                    <img src="images/personagens/jaqueline.jpg" alt="Personagem 12">
+                    <div class="character-info">
+                        <h3>Jacqueline</h3>
+                        <p>Tatiana Tibúrcio</p>
+                        <p>Esposa de Mestre, é uma mulher extraordinariamente forte, capaz de criar seus filhos sozinha, visitar seu marido na Ilha Grande e, ainda por cima, formar-se em Direito para não depender de advogados. Jaqueline se esforça para não esmorecer, mas as seguidas condenações de Mestre abalam suas convicções. Quando ele decide fugir, ela topa levar os filhos para viver essa vida difícil junto do marido.</p>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button id="previous-button" onclick="previousCharacter('modal4')">← anterior</button>
+                    <button id="next-button" onclick="nextCharacter('modal4')">próximo →</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+<!-- afroverso -->
+<div id="afroverso-section" class="afroverso-content active" style="align-content: center;">
+    <h2>crossover com outras produções Globoplay</h2>
+    <p>Em O Jogo que Mudou a História, o público reencontra alguns personagens que surgiram, inicialmente, em outras séries da produtora AfroReggae. Como a trama da nova produção se passa muitos anos antes dos acontecimentos de Arcanjo Renegado e A Divisão, tais personagens aparecem mais jovens. Confira, abaixo, quem são eles!</p>
+    <div class="afroverso-cards-container">
+        <div class="afroverso-card">
+            <div class="afroverso-card-inner">
+                <div class="afroverso-card-front">
+                    <img src="images/personagens/irma-emily.jpg" alt="arcanjo renegado" class="afroverso-card-img">
+                    <h3 style="font-family: 'IBM Plex Mono', monospace; color: #232323;padding-left: 20px;">Irmã Emily <br>(Alli Willow)</h3>
+                </div>
+                <div class="afroverso-card-back">
+                    <span style="font-family: 'IBM Plex Mono', monospace; color: #f1f1f1;">Freira da Pastoral Carcerária. Emily nasceu nos EUA e luta pelos direitos dos presos há quase duas décadas. Possui sentimentos confusos por Belmiro, que põem em xeque sua aptidão para o hábito. Em Arcanjo Renegado, irmã Emily aparece mais velha em uma missão na Amazônia.</span>
+                </div>
+            </div>
+        </div>
+        <div class="afroverso-card">
+            <div class="afroverso-card-inner">
+                <div class="afroverso-card-front">
+                    <img src="images/personagens/tenente-gabriel.jpg" alt="arcanjo renegado" class="afroverso-card-img">
+                    <h3 style="font-family: 'IBM Plex Mono', monospace; color: #232323; padding-left: 20px;">Tenente Gabriel <br>(Leonardo Brício)</h3>
+                </div>
+                <div class="afroverso-card-back">
+                    <span style="font-family: 'IBM Plex Mono', monospace; color: #f1f1f1;">Mais um personagem que surgiu em Arcanjo Renegado, apresentado como o pai de Mikhael (Marcello Melo Jr) e Sarah (Erika Januza). É um homem que dá o sangue pela polícia, servindo de inspiração para seus dois filhos, que seguiram a mesma profissão.</span>
+                </div>
+            </div>
+        </div>
+        <div class="afroverso-card">
+            <div class="afroverso-card-inner">
+                <div class="afroverso-card-front">
+                    <img src="images/personagens/sargento-afonso.jpg" alt="arcanjo renegado" class="afroverso-card-img">
+                    <h3 style="font-family: 'IBM Plex Mono', monospace; color: #232323;padding-left: 20px;">Sargento Afonso <br>(Marcello Melo)</h3>
+                </div>
+                <div class="afroverso-card-back">
+                    <span style="font-family: 'IBM Plex Mono', monospace; color: #f1f1f1;">Detetive eficiente e perspicaz, porém, corruptível. Ela aparece pela primeira vez na série A Divisão, trabalhando com Santiago (Erom Cordeiro) e Mendonça (Silvio Guindane) na DAAS - Divisão Antissequestro da Polícia do Rio de Janeiro.</span>
+                </div>
+            </div>
+        </div>
+        <div class="afroverso-card">
+            <div class="afroverso-card-inner">
+                <div class="afroverso-card-front">
+                    <img src="images/personagens/detetive-roberta.jpg" alt="A divisão" class="afroverso-card-img">
+                    <h3 style="font-family: 'IBM Plex Mono', monospace; color: #232323;padding-left: 20px;">Detetive Roberta <br>(Natalia Lage)</h3>
+                </div>
+                <div class="afroverso-card-back">
+                    <span style="font-family: 'IBM Plex Mono', monospace; color: #f1f1f1;">Detetive eficiente e perspicaz, porém, corruptível. Ela aparece pela primeira vez na série A Divisão, trabalhando com Santiago (Erom Cordeiro) e Mendonça (Silvio Guindane) na DAAS - Divisão Antissequestro da Polícia do Rio de Janeiro.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 10vh;"></div>
+
+<!-- game -->
+    <div id="game" class="section content active" style="height: 100vh; width: 100%; margin-bottom: 50px;z-index: 1000;">
+        <iframe src="https://s3.glbimg.com/v1/AUTH_8b29beb0cbe247a296f902be2fe084b6/2024/jogos/ojogogloboplay/index.html" width="100%" height="100%" frameborder="0" style="z-index: 1000;"></iframe>
+   
+</div>
+
+
+    <!-- inspirações da vida real -->
+    <div id="curiosidades-section" class="curiosidades-content active">
+        <div class="curiosidades-cards-container">
+            <div class="curiosidades-efplayer" id="image-wrapper1"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper2"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper3"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper4"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper5"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper6"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper7"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper8"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper9"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper10"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper11"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper12"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper13"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper14"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper15"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper16"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper17"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper18"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper19"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper20"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper21"></div>
+            <div class="curiosidades-efplayer" id="image-wrapper22"></div>
+        </div>
+    </div>
+
+    <!-- curiosidades -->
+    <!-- <div style="height: 10vh;"></div>
+    <div id="curiosidades" class="section content active" >
+        <h2>curiosidades</h2>
+        <picture>
+            <source srcset="images/curiosidadesmob.jpg" media="(max-width: 767px)">
+            <source srcset="images/curiosidadesdesk.jpg" media="(min-width: 768px)">
+            <img src="images/curiosidadesdesk.jpg" width="100%" loading="lazy" alt="Inspirações da vida real">
+        </picture>
+    </div> -->
+
+
+    
+
+    <!-- curiosidades -->
+    <!-- <div style="height: 10vh;"></div>
+    <div id="curiosidades" class="section content active" >
+        <h2>curiosidades</h2>
+        <div class="galeria-curiosidades-slider">
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image1.jpg" alt="Image 1" class="lazyload">
+                <div class="galeria-curiosidades-caption">O elenco é formado por 240 atores e atrizes, sendo 71% pretos.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image2.jpg" alt="Image 2" class="lazyload">
+                <div class="galeria-curiosidades-caption">Os atores e atrizes da série vieram de 18 cidades do Brasil – entre elas, algumas do interior do país, como Carpina (PE), Caicó (RN) e Pontalina (GO) – e de três países: Congo, Bélgica e França.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image3.jpg" alt="Image 3" class="lazyload">
+                <div class="galeria-curiosidades-caption">40% dos atores são iniciantes, além de moradores de 18 favelas diferentes.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image4.jpg" alt="Image 4" class="lazyload">
+                <div class="galeria-curiosidades-caption">Mais de 100 atores são egressos do sistema prisional, entre eles, Gilson da Maia, que interpreta Claudinho da Prata; Patrick Bruno, que vive Rui do Boi; e Diego Raymond, que encarna Zé Perverso na série. Além de atuar, Diego foi fundamental para “coreografar as cenas de tráfico”, segundo José Júnior.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image5.jpg" alt="Image 5" class="lazyload">
+                <div class="galeria-curiosidades-caption">Com exceção de Raphael Logam e Breno de Filippo, todos os atores que interpretaram carcereiros já foram agentes penitenciários na vida real.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image6.jpg" alt="Image 6" class="lazyload">
+                <div class="galeria-curiosidades-caption">Rogério Blanck, que desempenha na série o papel de Sampaio, diretor do presídio de Ilha Grande, já dirigiu a penitenciária de Bangu I na vida real.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image7.jpg" alt="Image 7" class="lazyload">
+                <div class="galeria-curiosidades-caption">Implodido em 1994, o Presídio de Ilha Grande teve sua fachada reconstituída em 3D para as imagens da série.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image8.jpg" alt="Image 8" class="lazyload">
+                <div class="galeria-curiosidades-caption">Dois presídios foram usados como locações para as cenas em Ilha Grande: Bangu 1 e o Complexo Frei Caneca, que está desativado.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image9.jpg" alt="Image 9" class="lazyload">
+                <div class="galeria-curiosidades-caption">A série foi gravada em seis comunidades do Rio de Janeiro: Vigário Geral, Parada de Lucas, Dique, Parque Analândia, Rocinha e Complexo da Pedreira. As cenas da fictícia Padre Nosso foram gravadas em Vigário Geral; as de Parada Geral, foram rodadas em Parada de Lucas. Já as sequências do Morro da Promessa não foram feitas no Morro do Juramento, pelo fato da favela estar muito modernizada para representar a época.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image10.jpg" alt="Image 10" class="lazyload">
+                <div class="galeria-curiosidades-caption">A cena do jogo de futebol foi gravada no Parque Analândia, em São João de Meriti, e contou nove câmeras para gravar cada detalhe.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image11.jpg" alt="Image 11" class="lazyload">
+                <div class="galeria-curiosidades-caption">Mais de 800 horas no processo de caracterização, entre pesquisa, concepção, testes e execução.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image12.jpg" alt="Image 12" class="lazyload">
+                <div class="galeria-curiosidades-caption">Os figurinos passaram por um processo de 60 dias de envelhecimento, para chegar ao aspecto necessário para as gravações.</div>
+            </div>
+            <div class="galeria-curiosidades-item-container">
+                <img data-src="image13.jpg" alt="Image 13" class="lazyload">
+                <div class="galeria-curiosidades-caption">A trilha sonora conta com músicas que eram ouvidas pela população das favelas e subúrbios do Rio de Janeiro naquela época. Bebeto, Nelson Ned, Cartola e Rick James são algumas das vozes que embalam as cenas.</div>
+            </div>
+        </div>
+    </div> -->
+    <div style="height: 10vh;"></div>
+
+    <!-- depoimentos -->
+    <div id="depoimento-section" class="depoimento-content active">
+        <h2 style="padding-bottom: 50px;">de olho nos bastidores</h2>
+        <div class="depoimento-cards-container">
+            <div class="depoimento-efplayer" id="player-wrapper1"></div>
+            <div class="depoimento-efplayer" id="player-wrapper2"></div>
+            <div class="depoimento-efplayer" id="player-wrapper3"></div>
+            <div class="depoimento-efplayer" id="player-wrapper5"></div>
+            <div class="depoimento-efplayer" id="player-wrapper6"></div>
+            <div class="depoimento-efplayer" id="player-wrapper7"></div>
+            <div class="depoimento-efplayer" id="player-wrapper8"></div>
+            <div class="depoimento-efplayer" id="player-wrapper9"></div>
+            <div class="depoimento-efplayer" id="player-wrapper10"></div>
+        </div>
+    </div>
+
+
+    <!-- notícias -->
+    <div id="noticias" class="active" style="margin-bottom: 50px;">
+        <h2>leia mais sobre a série </h2>
+        <div class="flourish-embed flourish-cards" data-src="visualisation/18230309?685449"><script src="https://public.flourish.studio/resources/embed.js"></script></div>    </div>
+
+    <!-- episódios -->
+    <!-- <div id="episodios" class="active" style="margin-bottom: 50px;">
+        <h2>episódios </h2>
+    </div>
+    <div class="body-ep">
+        <div class="wrapper-ep">
+            <div class="image-ep">
+                <img src="https://gshow.globo.com/tudo-mais/pop/justica-2/ep/justica2-semana01-ep01a04.gif" alt="Assista agora, no Globoplay, Arcanjo Renegado">
+            </div>
+            <div class="ep">
+                <div class="content-ep">
+                    <p class="p" style="margin-left: 0; margin-right: 0;">00/00/0000</p>
+                    <h3 class="h3">Episódio 1</h3>
+                    <p class="p" style="margin-left: 0; margin-right: 0;">O motoboy Balthazar é preso injustamente após ser reconhecido como assaltante do restaurante Canto do Bode em um catálogo digital de suspeitos da polícia. Violentada pelo tio na adolescência, Carolina muda de cidade para se distanciar da situação. Quando volta para Ceilândia, revive traumas do passado e decide denunciar seu abusador. Renato, um traficante de classe média, se muda para a comunidade do Sol Nascente. Com seu som alto ligado 24 horas por dia, passa a entrar em conflito com as vizinhas Geíza e Sandra. Em um momento de desespero, Milena rouba um carro. E acaba presa por um crime que não cometeu.</p>
+                </div>
+                <div class="date">
+                    <p class="p" style="color: #333;">Jun</p>
+                    <h3 class="h3" style="color: #333;">04</h3>
+                </div>
+            </div>
+            <div class="button-ep">
+                <a href="https://globoplay.globo.com/arcanjo-renegado/t/jqvngb9dQG/">Assistir <br>agora</a>
+            </div>
+        </div>
+    </div> -->
+    
+
+   
+
+ 
+
+ 
+<!-- conteúdo relacionado -->
+    <div id="relacionados" class="active" style="margin-bottom: 50px;">
+        <h2>conteúdos relacionados </h2>
+        <div>
+            <a href="https://globoplay.globo.com/arcanjo-renegado/t/jqvngb9dQG/"><img src="images/arcanjo-renegado.webp" alt="Assista agora, no Globoplay, Arcanjo Renegado" class="img-relacionados" width="250px"></a>
+            <a href="https://globoplay.globo.com/a-divisao/t/wDn8QHHyp2/"><img src="images/a-divisao.avif" alt="Assista agora, no Globoplay, A Divisão" class="img-relacionados" width="250px"></a>
+            <a href="https://globoplay.globo.com/betinho-no-fio-da-navalha/t/2CpqLtH59h/"><img src="images/betinho.avif" alt="Assista agora, no Globoplay, Betinho: no fio da navalha" class="img-relacionados" width="250px"></a>
+            <a href="https://globoplay.globo.com/vale-o-escrito-a-guerra-do-jogo-do-bicho/t/QJbzp1t9X5/temporadas/1/"><img src="images/vale-o-escrito.jpg" alt="Assista agora, no Globoplay, Vale o escrito" class="img-relacionados" width="250px"></a>
+            <a href="https://globoplay.globo.com/doutor-castor/t/PwgfQs1FHj/"><img src="images/dr-castor.jpeg" alt="Assista agora, no Globoplay, Dr. Castor" class="img-relacionados" width="250px"></a>
+        </div>
+    </div>
+
+
+<!-- footer -->
+    <div class="footer active">
+        <div class="footer-column">
+            <img src="images/logo-titulo.png" alt="Logo" class="footer-logo active">
+            <p>&copy; 2024 Globo</p>
+        </div>
+        <div class="footer-column">
+            <h3>GSHOW</h3>
+            <ul>
+                <li><a href="https://gshow.globo.com/tudo-mais/" target="_blank">Tudo mais</a></li>
+                <li><a href="https://gshow.globo.com/novelas/" target="_blank">Novelas</a></li>
+                <li><a href="https://gshow.globo.com/moda-e-beleza/" target="_blank">Moda e beleza</a></li>
+                <li><a href="https://gshow.globo.com/videos/" target="_blank">Vídeos</a></li>
+                <li><a href="https://gshow.globo.com/realities/" target="_blank">Realities</a></li>
+                <li><a href="https://gshow.globo.com/podcast/" target="_blank">Podcasts</a></li>
+                <li><a href="https://gshow.globo.com/horoscopo-etc/" target="_blank">Horóscopos</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Globoplay</h3>
+            <ul>
+                <li><a href="https://globoplay.globo.com/categorias/series/" target="_blank">Séries</a></li>
+                <li><a href="https://globoplay.globo.com/categorias/filmes/" target="_blank">Filmes</a></li>
+                <li><a href="https://globoplay.globo.com/agora-na-tv/" target="_blank">Ao vivo</a></li>
+            </ul>
+            <div class="footer__share svelte-1esakd5" data-svelte-h="svelte-196y99p" style="padding-top: 50px;">
+                <div class="footer__share__button svelte-1esakd5">
+                    <a href="https://twitter.com/globoplay" target="_blank" title="twitter" class="svelte-1esakd5">
+                        <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="https://www.w3.org/2000/svg" class="svelte-1esakd5">
+                            <path d="M21.4523 40.9047C32.1956 40.9047 40.9047 32.1956 40.9047 21.4523C40.9047 10.7091 32.1956 2 21.4523 2C10.7091 2 2 10.7091 2 21.4523C2 32.1956 10.7091 40.9047 21.4523 40.9047Z" stroke="#cb2228" stroke-width="3.2286" stroke-miterlimit="10" class="svelte-1esakd5"></path>
+                            <path d="M30.8519 30.5787L23.3962 19.8329L31.058 10.941H29.228L22.5798 18.6562L18.1897 12.327L17.2276 10.9404H11.0896L12.0518 12.327L19.1794 22.6023L11.1129 31.9647H12.9418L19.9953 23.778L24.7134 30.5782L25.6745 31.9647H31.8124L30.8513 30.5782L30.8519 30.5787ZM26.4019 30.5787L20.9315 22.6934L20.1156 21.5177L13.7403 12.3275H16.5038L21.6463 19.7407L22.4622 20.9175L29.1655 30.5793H26.4019V30.5787Z" fill="#cb2228" class="svelte-1esakd5"></path>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.facebook.com/globoplay/" target="_blank" title="facebook" class="svelte-1esakd5">
+                        <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="https://www.w3.org/2000/svg" class="svelte-1esakd5">
+                            <path d="M21.357 40.9047C32.1002 40.9047 40.8093 32.1956 40.8093 21.4523C40.8093 10.7091 32.1002 2 21.357 2C10.6138 2 1.90466 10.7091 1.90466 21.4523C1.90466 32.1956 10.6138 40.9047 21.357 40.9047Z" stroke="#cb2228" stroke-width="3.2286" stroke-miterlimit="10" class="svelte-1esakd5"></path>
+                            <path d="M21.988 19.115V19.615H22.488H26.1843L25.6333 22.5526H22.4874H21.9874V23.0526V31.4538C21.6265 31.4843 21.2614 31.5 20.8929 31.5C19.9735 31.5 19.0771 31.4036 18.2138 31.2215V23.0526V22.5526H17.7138H15.5V19.615H17.7138H18.2138V19.115V17.4183C18.2138 15.2927 18.7058 13.8429 19.6306 12.9181C20.5556 11.9934 22.0071 11.5 24.1388 11.5C24.7973 11.5 25.8476 11.6052 26.5 11.7229V14.3573C26.2095 14.3464 25.8623 14.3413 25.4797 14.3413C24.3597 14.3413 23.4478 14.5448 22.8279 15.1413C22.2031 15.7426 21.988 16.6331 21.988 17.7224V19.115Z" stroke="#cb2228" class="svelte-1esakd5"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@globoplay" target="_blank" title="tiktok" class="svelte-1esakd5">
+                        <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="https://www.w3.org/2000/svg" class="svelte-1esakd5">
+                            <path d="M21.2617 40.9047C32.0049 40.9047 40.714 32.1956 40.714 21.4523C40.714 10.7091 32.0049 2 21.2617 2C10.5184 2 1.80933 10.7091 1.80933 21.4523C1.80933 32.1956 10.5184 40.9047 21.2617 40.9047Z" stroke="#cb2228" stroke-width="3.2286" stroke-miterlimit="10" class="svelte-1esakd5"></path>
+                            <g clip-path="url(#clip0_622_94)" class="svelte-1esakd5">
+                                <path d="M27.0347 15.6261L27.8111 16.1414V16.0536C28.3358 16.2894 28.9041 16.4435 29.5 16.4992V19.1172C27.9618 19.02 26.5402 18.4775 25.3578 17.6138L24.5629 17.0332V18.0176V25.3546C24.5629 28.7514 21.8484 31.5 18.5315 31.5C17.2481 31.5 16.0589 31.0893 15.0787 30.3891L15.0787 30.3891C13.5217 29.2773 12.5 27.4368 12.5 25.3554C12.5 21.9593 15.2145 19.21 18.5315 19.21C18.6586 19.21 18.7853 19.2149 18.9119 19.224V21.8427C18.7875 21.8282 18.6607 21.8205 18.5315 21.8205C16.6025 21.8205 15.0486 23.414 15.0486 25.3554C15.0486 26.7099 15.805 27.8891 16.912 28.4821L16.9122 28.4823C17.3952 28.7407 17.9461 28.8902 18.5315 28.8902C20.4173 28.8902 21.9385 27.367 22.008 25.4876L22.0084 25.4785L22.0084 25.4693L22.0141 11.5H24.5857C24.6013 11.6711 24.6245 11.8397 24.6546 12.0055L24.6547 12.0057C24.9297 13.5176 25.8118 14.8146 27.0347 15.6261Z" stroke="#cb2228" class="svelte-1esakd5"></path></g>
+                                <defs class="svelte-1esakd5"><clipPath id="clip0_622_94" class="svelte-1esakd5"><rect width="18" height="21" fill="white" transform="translate(12 11)" class="svelte-1esakd5"></rect></clipPath></defs>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/globoplay/" target="_blank" title="instagram" class="svelte-1esakd5">
+                            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="https://www.w3.org/2000/svg" class="svelte-1esakd5">
+                                <path d="M21.357 40.9047C32.1002 40.9047 40.8093 32.1956 40.8093 21.4523C40.8093 10.7091 32.1002 2 21.357 2C10.6138 2 1.90466 10.7091 1.90466 21.4523C1.90466 32.1956 10.6138 40.9047 21.357 40.9047Z" stroke="#cb2228" stroke-width="3.2286" stroke-miterlimit="10" class="svelte-1esakd5"></path>
+                                <path d="M33.0762 21.4505C33.0725 21.06 33.0725 20.6886 33.0725 20.3246C33.0725 19.1347 33.0778 18.0284 33.0052 16.6212C32.9602 15.5827 32.7986 14.6211 32.4584 13.7766C32.1612 12.9771 31.7024 12.2904 31.109 11.6997C30.5543 11.118 29.8613 10.6692 29.0348 10.3497C28.1812 10.0159 27.2328 9.83526 26.1901 9.80665C25.2195 9.7436 23.5093 9.72611 21.3587 9.73512C19.2082 9.72611 17.4974 9.74413 16.5273 9.80665C15.4846 9.83526 14.5368 10.0159 13.6827 10.3497C12.8562 10.6692 12.1632 11.118 11.6085 11.6997C11.0151 12.2904 10.5562 12.9771 10.259 13.7766C9.91886 14.6211 9.75727 15.5827 9.71223 16.6212C9.61739 18.4586 9.65554 19.7821 9.64124 21.45V21.4526C9.64494 21.8431 9.64494 22.2145 9.64494 22.5785C9.64494 23.7685 9.63965 24.8747 9.71223 26.2819C9.75727 27.3204 9.91886 28.282 10.259 29.1265C10.5562 29.926 11.0151 30.6127 11.6085 31.2034C12.1632 31.7852 12.8562 32.2339 13.6827 32.5534C14.5362 32.8872 15.4846 33.0678 16.5273 33.0965C17.4979 33.1595 19.2082 33.177 21.3587 33.168C23.5093 33.177 25.2195 33.159 26.1901 33.0965C27.2328 33.0678 28.1807 32.8872 29.0348 32.5534C29.8613 32.2339 30.5543 31.7852 31.109 31.2034C31.7024 30.6127 32.1612 29.926 32.4584 29.1265C32.7986 28.282 32.9602 27.3204 33.0052 26.2819C33.1001 24.4445 33.0619 23.121 33.0762 21.4531V21.4505ZM30.8981 26.1733V26.1913C30.86 27.057 30.727 27.7792 30.5018 28.3387L30.4912 28.3652L30.4812 28.3917C30.2984 28.8839 30.0165 29.3141 29.6207 29.7088L29.6011 29.7279L29.5821 29.7475C29.244 30.1024 28.8159 30.3764 28.2739 30.5862L28.266 30.5894C27.645 30.832 26.9271 30.9661 26.1319 30.9883L26.0927 30.9894L26.0535 30.992C25.3424 31.0381 24.0942 31.0614 22.3415 31.0614C22.0284 31.0614 21.7026 31.0604 21.3667 31.0593H21.3492C21.0133 31.0604 20.6874 31.0614 20.3743 31.0614C18.6222 31.0614 17.3734 31.0381 16.6624 30.992L16.6232 30.9894L16.584 30.9883C15.7893 30.9666 15.0708 30.832 14.4499 30.5894L14.4419 30.5862C13.8999 30.3764 13.4718 30.1024 13.1333 29.7475L13.1142 29.7279L13.0946 29.7088C12.6983 29.3141 12.417 28.8839 12.2342 28.3917L12.2241 28.3652L12.2135 28.3387C11.9883 27.7792 11.8554 27.057 11.8177 26.1913V26.1733C11.752 24.9113 11.7526 23.8898 11.7526 22.809C11.7526 22.3756 11.7526 21.9279 11.7489 21.4521C11.7526 20.9763 11.7526 20.5286 11.7526 20.0952C11.7526 19.0139 11.7515 17.9924 11.8172 16.7303V16.7128C11.8554 15.8471 11.9883 15.125 12.2135 14.5655L12.2241 14.539L12.2342 14.5125C12.417 14.0203 12.6983 13.5896 13.0946 13.1948L13.1142 13.1758L13.1333 13.1562C13.4718 12.8012 13.8994 12.5273 14.4419 12.3175L14.4499 12.3143C15.0708 12.0711 15.7893 11.9371 16.5835 11.9153L16.6232 11.9143L16.6624 11.9116C17.3734 11.8655 18.6222 11.8422 20.3749 11.8422C20.688 11.8422 21.0133 11.8433 21.3487 11.8443H21.3661C21.702 11.8433 22.0268 11.8422 22.3405 11.8422C24.0931 11.8422 25.3419 11.8655 26.0529 11.9116L26.0921 11.9143L26.1319 11.9153C26.9266 11.9371 27.6445 12.0711 28.2655 12.3143L28.2734 12.3175C28.8154 12.5273 29.2435 12.8012 29.5815 13.1562L29.6006 13.1758L29.6202 13.1948C30.0165 13.5896 30.2978 14.0203 30.4806 14.5125L30.4907 14.539L30.5013 14.5655C30.7265 15.125 30.8595 15.8471 30.8971 16.7128V16.7303C30.9628 17.9924 30.9622 19.0139 30.9622 20.0952C30.9622 20.5286 30.9622 20.9763 30.9659 21.4521C30.9622 21.9279 30.9622 22.3756 30.9622 22.809C30.9622 23.8903 30.9633 24.9118 30.8976 26.1733H30.8981Z" fill="#cb2228" class="svelte-1esakd5"></path>
+                                <path d="M21.3587 15.4346C18.0362 15.4346 15.3431 18.1276 15.3431 21.4501C15.3431 24.7726 18.0362 27.4657 21.3587 27.4657C24.6812 27.4657 27.3743 24.7726 27.3743 21.4501C27.3743 18.1276 24.6812 15.4346 21.3587 15.4346ZM21.3587 25.3565C19.2045 25.3565 17.4524 23.6039 17.4524 21.4501C17.4524 19.2964 19.2045 17.5438 21.3587 17.5438C23.513 17.5438 25.2651 19.2959 25.2651 21.4501C25.2651 23.6044 23.513 25.3565 21.3587 25.3565Z" fill="#cb2228" class="svelte-1esakd5"></path>
+                                <path d="M27.6135 13.79C26.8368 13.79 26.2074 14.4195 26.2074 15.1967C26.2074 15.974 26.8374 16.6034 27.6135 16.6034C28.3897 16.6034 29.0202 15.974 29.0202 15.1967C29.0202 14.4195 28.3903 13.79 27.6135 13.79Z" fill="#cb2228" class="svelte-1esakd5"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+        <a href="https://globoplay.globo.com/o-jogo-que-mudou-a-historia/t/dYKWzMQpYp/" target="_blank"><button class="fixed-footer-btn" style="text-align: center; font-size: 14px;">Dia 13 no<br>Globoplay</button></a>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyloadImages = document.querySelectorAll("img.lazyload");
+        var imageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    var image = entry.target;
+                    image.src = image.dataset.src;
+                    image.classList.remove("lazyload");
+                    imageObserver.unobserve(image);
+                }
+            });
+        });
+
+        lazyloadImages.forEach(function(image) {
+            imageObserver.observe(image);
+        });
+    });
+</script>
+
+    <script src="lazyload.js"></script>
+    <script src="personagens.js"></script>
+    <script src="curiosidades.js"></script>
+
+    <script src="https://player.globo.com/WM.js"></script>
+    
+
+
+    <script src="https://s3.glbimg.com/v1/AUTH_e1b09a2d222b4900a437a46914be81e5/api/stable/web/api.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    
+    <!-- Script para os vídeos 1-3 e 5-10 -->
+    <script>
+        function onPlayersAvailable() {
+            const elements = [
+                document.querySelector('#player-wrapper1'),
+                document.querySelector('#player-wrapper2'),
+                document.querySelector('#player-wrapper3'),
+                document.querySelector('#player-wrapper5'),
+                document.querySelector('#player-wrapper6'),
+                document.querySelector('#player-wrapper7'),
+                document.querySelector('#player-wrapper8'),
+                document.querySelector('#player-wrapper9'),
+                document.querySelector('#player-wrapper10')
+
+            ];
+            const videoIDs = [
+                '12631560', '12632079', '12633029', '12632735', 
+                '12632415', '12632774', '12632799', '12634956', 
+                '12635930'
+            ];
+
+            elements.forEach((element, index) => {
+                const player = new WM.Player({
+                    videosIDs: videoIDs[index],
+                    startMuted: false,
+                    autoPlay: false,
+                    onCanPlay: function(){ this.addPip(4452360) },
+                    skipDFP: false,
+                    width: '100%',
+                    height: '100%',
+                });
+                player.attachTo(element);
+            });
+        }
+        
+        WM.playerAvailable.then(onPlayersAvailable);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.depoimento-cards-container');
+            const players = document.querySelectorAll('.depoimento-efplayer'); // Excluindo o vídeo 4
+
+            function updatePlayerStyles() {
+                const scrollTop = container.scrollTop;
+                const containerHeight = container.clientHeight;
+
+                players.forEach((player, index) => {
+                    const rect = player.getBoundingClientRect();
+                    const playerCenter = rect.top + rect.height / 2;
+                    const containerCenter = containerHeight / 2;
+
+                    const distanceFromCenter = Math.abs(containerCenter - playerCenter);
+                    const scale = Math.max(0.5, 1 - distanceFromCenter / containerCenter);
+                    const zIndex = Math.round(scale * 100);
+                    const opacity = scale > 0.5 ? 1 : 0;
+
+                    gsap.to(player, {
+                        scale: scale,
+                        zIndex: zIndex,
+                        opacity: opacity,
+                        xPercent: -50,
+                        duration: 0.4
+                    });
+                });
+            }
+
+            players.forEach((player, index) => {
+                player.style.top = `${index * (container.clientHeight * 0.2)}px`; // Espaçamento vertical de 10%
+                player.style.left = '50%';
+            });
+
+            container.addEventListener('scroll', updatePlayerStyles);
+            window.addEventListener('resize', updatePlayerStyles);
+            updatePlayerStyles();
+        });
+    </script>
+<script>
+function onPlayer4Available() {
+    const element4 = document.querySelector('#player-wrapper4');
+
+    var player4 = new WM.Player({
+      videosIDs: '12573974',
+      startMuted: false,
+      autoPlay: true,
+      onCanPlay: function(){this.addPip(4452360)},
+      skipDFP: true,
+      width: '100%',
+      height: '100%',
+    });
+    
+    player4.attachTo(element4);
+}
+
+WM.playerAvailable.then(onPlayer4Available);
+</script>
+<script src="https://p.glbimg.com/api/stable/api.min.js" async></script><script src="https://static.chartbeat.com/js/chartbeat_mab.js" async></script><script type="text/javascript">
+    var utag_data = utag_data || {};
+    utag_data.structure_tree = ["GSHOW","Globoplay"];
+    utag_data.tipo_pagina = '';
+    utag_data.page_name = 'materia';
+    utag_data.ad_unit = 'tvg_Gshow\/Globoplay';
+    utag_data.ad_positions = JSON.stringify({
+        mobile: [],
+        desktop: []
+    });
+</script><script src="//s3.glbimg.com/v1/AUTH_acd8438fd650434baa93efc372c066a1/libs/lib-pub-relay/gshow/prod/lib-pub-relay-gshow-latest.js" defer></script><script type="text/javascript">
+    // @ts-nocheck
+
+    var _sf_async_config = _sf_async_config || {};
+    /** CONFIGURATION START **/
+    _sf_async_config.uid = 65728; // ACCOUNT NUMBER
+    _sf_async_config.domain = 'gshow.globo.com'; // DOMAIN
+    _sf_async_config.flickerControl = false;
+    _sf_async_config.useCanonical = true;
+</script>
+
+    
+</body>
+</html>
+
+
+
+
+
+
